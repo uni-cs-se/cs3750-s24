@@ -7,6 +7,7 @@ class PeasantRevoltTests(unittest.TestCase):
 
     def test_initial_move(self):
         self.assertEqual(self.game['turn'], 'White')
+        self.assertEqual(self.game['turn'], 'Black')
 
 
 if __name__=='__main__':
