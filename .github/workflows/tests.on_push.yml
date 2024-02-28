@@ -2,7 +2,7 @@ name: Testing Peasant Revolt
 run-name: ${{ github.actor }} is testing Peasant Revolt chess
 on: [push]
 jobs:
-  Run-Unittest
+  Run-Unittest:
     runs-on: ubuntu-latest
     steps:
       - run: cd peasant_revolt && python3 pr_tests.py
