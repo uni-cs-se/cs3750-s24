@@ -1,0 +1,12 @@
+name: Testing Peasant Revolt
+run-name: ${{ github.actor }} is testing Peasant Revolt chess
+on: [push]
+jobs:
+  Run-Unittest
+    runs-on: ubuntu-latest
+    steps:
+      - run: cd peasant_revolt && python3 pr_tests.py
+      - name: The job has failed.
+        if: ${{ failure() }} 
+        run: echo At least one test case failed!
+
