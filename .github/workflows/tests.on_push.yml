@@ -5,6 +5,7 @@ jobs:
   Run-Unittest:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - run: cd peasant_revolt && python3 pr_tests.py
       - name: The job has failed.
         if: ${{ failure() }} 
